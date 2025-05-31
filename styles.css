@@ -14,12 +14,48 @@ body {
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 1200px;
     width: 100%;
     background-color: white;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Ad Container Styles */
+.ad-container {
+    width: 100%;
+    min-height: 90px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.ad-container-side {
+    position: absolute;
+    right: -160px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 140px;
+    min-height: 600px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Hide side ad on smaller screens */
+@media (max-width: 1400px) {
+    .ad-container-side {
+        display: none;
+    }
 }
 
 h1 {
